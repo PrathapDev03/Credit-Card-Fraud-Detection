@@ -1,27 +1,25 @@
-# Credit Card Fraud Detection
+Credit Card Fraud Detection Using Machine Learning
+Abstract:
+With the rise of online banking and credit card usage, fraudulent activities have become more common. This project focuses on using machine learning techniques to detect fraudulent credit card transactions, minimizing the risk to users and businesses. Supervised learning methods are employed to classify transactions, helping to identify potential fraud effectively.
 
-## Task Objectives:
-The goal of this project is to develop a classification model to detect fraudulent credit card transactions efficiently. The dataset consists of transaction data including amounts, merchant details, and timestamps. The challenge involves addressing class imbalance and improving model performance to minimize false positives while maintaining high accuracy.
+Problem Statement:
+Fraudulent transactions cause significant damage to companies' reputations and customer trust. The aim of this project is to develop a model that can detect credit card fraud with high accuracy, minimizing false positives, and ensuring quick response to potential fraudulent activities.
 
-## Steps to Run the Project:
-1. **Preprocessing**:
-    - Scale the `Amount` and `Time` features using standard scaling.
-    - Handle class imbalance using undersampling techniques.
-   
-2. **Feature Engineering**:
-    - The dataset consists of anonymized features from PCA (V1 to V28), along with `Scaled_Amount` and `Scaled_Time` replacing the original amount and time fields.
+Dataset:
+The dataset contains anonymized credit card transactions, including details like transaction amount, merchant, and time. Fraudulent and non-fraudulent transactions are labeled to facilitate supervised learning.
 
-3. **Model Training**:
-    - A Random Forest classifier was trained on the balanced dataset using 80% of the data for training and 20% for testing.
+Features and Techniques:
+Preprocessing:
 
-4. **Model Evaluation**:
-    - Accuracy: 92.89%
-    - Precision: 98.67%
-    - Recall: 85.06%
-    - F1 Score: 91.36%
+Features like Amount and Time are scaled.
+Imbalanced classes are handled through techniques like undersampling or oversampling.
+Feature Engineering:
 
-## Key Techniques:
-- **Class Imbalance**: Addressed by undersampling the majority class (non-fraudulent transactions).
-- **Model Evaluation**: Focused on minimizing false positives while ensuring high recall for fraudulent transactions.
+New features such as transaction frequency, location mismatch, and spending patterns are derived.
+Modeling:
 
+Various machine learning algorithms like Isolation Forest and Random Forest are used to classify transactions as fraudulent or non-fraudulent.
+Evaluation:
 
+Model performance is evaluated based on accuracy, precision, recall, and F1-score.
+The aim is to minimize false positives while maintaining high accuracy in detecting fraud.
